@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (!localStorage.getItem("visited")) {
+            window.location.href = "loading.html";
+        } else {
+            localStorage.removeItem("visited"); // Remove it so next refresh shows loading page again
+        }
+    </script>
+    <title>Home</title>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="./home.js" defer></script>
+</head>
+
+<body>
+    <div class="first-div">
+        <div class="logo">
+            <a
+                href="https://themeforest.net/item/pulse-academic-personal-vcard-wordpress-theme/13472101?_gl=1*e1xmua*_gcl_au*MTU3MTExMTk3OS4xNzQxMjQ1MTM1*_ga*MTg2Nzg4ODIyLjE3NDEwNzEzNDM.*_ga_ZKBVC1X78F*MTc0MTI0NDk5MC41LjEuMTc0MTI0NTE1My40MS4wLjA.&amp;_ga=2.165034236.299081728.1741244985-186788822.1741071343">Envato
+                Market</a>
+        </div>
+        <div class="action">
+            <div class="action-buy">
+                <a href="https://themeforest.net/checkout/from_item/13472101?license=regular&amp;support=bundle_6month">Buy
+                    now</a>
+            </div>
+        </div>
+    </div>
+    <div class="menu-toggle" id="menuToggle">☰</div>
+    <div class="breadcrumb" id="breadcrumb">
+        <div class="recent">
+            <h2>RECENT ACTIVITY</h2>
+        </div>
+        <div class="animation-para">
+            <p>Exciting News! ???? We are thrilled to announce the launch of our latest product, Designed with you in
+                mind, Pulse offers innovative features to enhance your experience. Check it out now and be among the
+                first to enjoy cutting-edge technology and design!</p>
+        </div>
+        <div class="social-links">
+            <div class="link-div">
+                <a data-tooltip="Linkedin" href="#" target="_blank" class="linkedin">
+                    <img src="https://seashell-seal-546316.hostingersite.com/wp-content/uploads/2022/12/in.png"
+                        class="nav-img">
+                </a>
+            </div>
+            <div class="res-div">
+                <a data-tooltip="ResearchGate" href="#" target="_blank" class="researchGate">
+                    <img src="https://seashell-seal-546316.hostingersite.com/wp-content/uploads/2022/12/rg-2.png"
+                        class="nav-img">
+                </a>
+            </div>
+            <div class="aca-div">
+                <a data-tooltip="Academia.edu" href="#" target="_blank" class="academic">
+                    <img src="https://seashell-seal-546316.hostingersite.com/wp-content/uploads/2022/12/Academiapng.png"
+                        class="nav-img">
+                </a>
+            </div>
+        </div>
+    </div>
+    <section class="main-page">
+        <nav class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">ACADEMIC</a>
+            <a href="#">BLOG & NEWS</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="contents">
+            <h3>PHD STUDENT / DEVELOPER</h3>
+            <h1>Christopher doe</h1>
+            <p>I am a developer and passionate <br>
+                about digital solutions.
+            </p>
+        </div>
+    </section>
+    <section class="about-page">
+        <div class="about-short">
+            <div class="arrow-page">
+                <div class="arrow-btn">
+                    <a class="fa fa-arrow-down"></a>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="about-h1">
+                    <div class="about-layout">
+                        <div class="about-my">
+                            <h1>ABOUT MY </h1>
+                        </div>
+                        <div class="line1"></div>
+                    </div>
+                    <div class="career-content">
+                        <div class="about-career">
+                            <h1>CAREER</h1>
+                        </div>
+                        <div class="line2"></div>
+                    </div>
+                </div>
+                <div class="about-p">
+                    <p>I'm a passionate developer driven by a relentless pursuit of digital solutions. With a love
+                        for
+                        coding and innovation, I thrive on transforming ideas into impactful software. My dedication
+                        to
+                        crafting cutting-edge technology fuels my ongoing journey in the world of development.</p>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="exp-img">
+                    <img src="./images/workspace.webp" alt="">
+                </div>
+                <div class="exp-hidden">
+                    <h1 id="moving-text">GREAT</h1>
+                </div>
+                <div class="exp-content">
+                    <div class="exp-div">
+                        <h1>EXPERIENCE</h1>
+                        <p>My extensive experience in the field is a testament to my expertise and dedication,
+                            consistently delivering outstanding results in the digital landscape. I'm a seasoned
+                            professional who excels in the world of development.</p>
+                    </div>
+                    <div class="auto-div">
+                        <h1>AUTONOMY</h1>
+                        <p>I excel in my work with a strong sense of autonomy, making me a self-reliant and efficient
+                            developer. My ability to take initiative and drive projects forward independently has
+                            consistently proven to be a valuable asset in delivering successful digital solutions.</p>
+                    </div>
+                    <div class="invo-div">
+                        <h1>INVOLVMENT</h1>
+                        <p>I actively engage in every aspect of the development process, fostering collaboration and
+                            synergy within teams. My dedication to active involvement ensures that I contribute
+                            effectively to projects, creating seamless and innovative digital solutions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="study-main">
+                <div class="study-exp">
+                    <div class="study-h11">
+                        <h1>EXPERIENCE</h1>
+                    </div>
+                    <div class="study-exp-line"></div>
+                </div>
+                <div class="studies">
+                    <div class="study-h12">
+                        <h1>& STUDIES </h1>
+                    </div>
+                    <div class="study-exp-line2"></div>
+                </div>
+                <div class="education">
+                    <div class="edu1">
+                        <h2>2008-2010</h2>
+                        <h1>COMPUTER ENGINEERING</h1>
+                        <h3>UNIVERSITY OF CALIFORNIA</h3>
+                    </div>
+                    <div class="edu2">
+                        <h2>2004-2008</h2>
+                        <h1>ELECTRONICS ENGINEERING</h1>
+                        <h3>UNIVERSITY OF CALIFORNIA</h3>
+                    </div>
+                </div>
+                <div class="arrow-left-right">
+                    <button id="left-arrow"> <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
+                    </button>
+                    <button id="right-arrow"> <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                    </button>
+                </div>
+            </div>
+            <div class="lab">
+                <h2>LAB ASSISTANT</h2>
+                <p>As a Lab Assistant, I facilitated smooth laboratory operations, demonstrating precision in equipment
+                    handling and adherence to protocols. My dedication to maintaining a conducive learning environment
+                    contributed to the success of experimental endeavors.</p>
+            </div>
+            <div class="project">
+                <div class="project-content">
+                    <h1>LATEST </h1>
+                    <h2>PROJECTS</h2>
+                    <p>These are my latest projects, where I've applied my expertise to deliver cutting-edge digital
+                        solutions.</p>
+                </div>
+                <div class="proj-img-container">
+                    <div class="project-img">
+                        <img class="pro-img" src="./images/javier-esteban-8zcp9L0zNhg-unsplash-1.jpg" alt="">
+                        <div class="image-text">
+                            <h3>NFT APP DEVELOPMENT</h3>
+                            <h4>WEB APPLICATION</h4>
+                        </div>
+                        <div class="img-content">
+                            <h1>NEXT <br> TRAVEL MOBILE APP DESIGN</h1>
+                            <button id="right-arrow2"> <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="plane-bg">
+                        <h2>
+                            <li>NOW PROUDLY WORKING WITH GOOGLE</li>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="final-page">
+        <div class="skills">
+            <h3>EXPERTISE</h3>
+            <h4>& SKILLS</h4>
+            <p>I possess coding mastery, adept problem-solving, ideal for complex development challenges. </p>
+        </div>
+        <div class="selection-page">
+            <a href="">WEB DEVELOPMENT</a>
+            <a href="">MOBILE DEVELOPMENT</a>
+            <a href="">UI/UX DESIGN</a>
+        </div>
+        <div class="last-div">
+            <div class="percentage">
+                <div class="perc-short">
+                    <div class="perc-short-h5">
+                        <h5>80%</h5>
+                    </div>
+                    <div class="perc-bal">
+                        <div class="perc-bal-top">
+                            <h5>LEVEL------- INTERMEDIATE</h5>
+                            <h6>EXPERIENCE------- 3 YEARS</h6>
+                        </div>
+                        <div class="perc-bal-down">
+                            <h6>PHP</h6>
+                            <h6>ASP</h6>
+                            <h6>ROR</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>In web development, my skills shine through with proficiency in front-end technologies like HTML, CSS,
+                and JavaScript. I also excel in back-end frameworks such as Node.js and databases. My expertise allows
+                me to create seamless, responsive web applications with a strong user-focused approach</p>
+        </div>
+    </section>  
+</body>
+
+</html>
