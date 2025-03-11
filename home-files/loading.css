@@ -1,0 +1,120 @@
+ body {
+     background-color: white;
+     color: white;
+     font-family: Arial, sans-serif;
+     margin: 0;
+ }
+
+
+
+ .first-div {
+     font-size: 12px;
+     height: 54px;
+     background-color: #262626;
+     z-index: 200;
+     position: fixed;
+     width: 100%;
+ }
+
+ .logo {
+     float: left;
+     padding: 0 20px;
+ }
+
+ .logo a {
+     display: inline-block;
+     position: absolute;
+     top: 18px;
+     text-indent: -9999px;
+     height: 18px;
+     width: 152px;
+     background: url(./images/envato_market-dd390ae860330996644c1c109912d2bf63885fc075b87215ace9b5b4bdc71cc8.svg);
+     background-size: 152px 18px;
+ }
+
+ a {
+     background-color: transparent;
+ }
+
+ .action {
+     float: right;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .action-buy {
+     display: flex;
+     padding: 12px 40px;
+ }
+
+ .action-buy a {
+     width: 85px;
+     height: 30px;
+     color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-weight: 300;
+     font-size: 15px;
+     box-sizing: border-box;
+     margin: 0;
+     border: none;
+     border-radius: 4px;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+     text-decoration: none;
+     cursor: pointer;
+     background-color: #82b440;
+ }
+
+ .loading-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     height: 100vh;
+
+     text-align: center;
+ }
+
+ .loading-container h1 {
+     background: linear-gradient(to right, #004d40, #212a4d);
+     -webkit-background-clip: text;
+     background-clip: text;
+     color: transparent;
+ }
+
+ #name {
+     font-size: 3rem;
+     font-weight: bold;
+     opacity: 0;
+     transition: opacity 2s ease-in-out;
+
+ }
+
+ #loading-name {
+     font-size: 100px;
+     font-weight: bold;
+     animation: fadeIn 3s ease-in-out;
+ }
+
+ #loading-qualification {
+     font-size: 17px;
+     margin-top: -18px;
+     letter-spacing: 10px;
+     animation: fadeIn 3s ease-in-out;
+     background: linear-gradient(to right, #004d40, #212a4d);
+     -webkit-background-clip: text;
+     background-clip: text;
+     color: transparent;
+ }
+
+ @keyframes fadeIn {
+     0% {
+         opacity: 0;
+     }
+
+     100% {
+         opacity: 1;
+     }
+ }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <link rel="stylesheet" href="loading.css">
+</head>
+
+<body>
+    <div class="first-div">
+        <div class="logo">
+            <a
+                href="https://themeforest.net/item/pulse-academic-personal-vcard-wordpress-theme/13472101?_gl=1*e1xmua*_gcl_au*MTU3MTExMTk3OS4xNzQxMjQ1MTM1*_ga*MTg2Nzg4ODIyLjE3NDEwNzEzNDM.*_ga_ZKBVC1X78F*MTc0MTI0NDk5MC41LjEuMTc0MTI0NTE1My40MS4wLjA.&amp;_ga=2.165034236.299081728.1741244985-186788822.1741071343">Envato
+                Market</a>
+        </div>
+        <div class="action">
+            <div class="action-buy">
+                <a href="https://themeforest.net/checkout/from_item/13472101?license=regular&amp;support=bundle_6month">Buy
+                    now</a>
+            </div>
+        </div>
+    </div>
+    <div class="loading-container">
+        <h1 id="loading-name">Christopher doe</h1>
+        <h3 id="loading-qualification">PHD STUDENT / DEVELOPER</h3>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(() => {
+                localStorage.setItem("visited", "true"); 
+                window.location.href = "home.html";
+            }, 5000);
+        });
+    </script>
+
+</body>
+
+</html>
