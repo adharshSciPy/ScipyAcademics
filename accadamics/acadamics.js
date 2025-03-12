@@ -1,3 +1,18 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const breadcrumb = document.getElementById("breadcrumb");
+
+    menuToggle.addEventListener("click", function () {
+        if (breadcrumb.style.transform === "translateY(0px)") {
+            breadcrumb.style.transform = "translateY(-100%)";
+            menuToggle.textContent = "☰";
+        } else {
+            breadcrumb.style.transform = "translateY(0px)";
+            menuToggle.textContent = "✖"; 
+        }
+    });
+});
+
 // Function to handle section toggling when sidebar links are clicked
 function toggleContent(event) {
     event.preventDefault(); // Prevent default anchor behavior
@@ -9,7 +24,7 @@ function toggleContent(event) {
     });
 
     // Remove 'active' class from all sidebar links
-    const allLinks = document.querySelectorAll('.sidebar a');
+    const allLinks = document.querySelectorAll('.sidebar1 a');
     allLinks.forEach(link => {
         link.classList.remove('active');
     });
@@ -28,10 +43,28 @@ function toggleContent(event) {
 // When the page loads, show the 'book' section by default
 window.onload = () => {
     document.getElementById('book').classList.add('open');
-    document.querySelector('.sidebar a[href="#book"]').classList.add('active');
+    document.querySelector('.sidebar1 a[href="#book"]').classList.add('active');
 };
 
 // Add event listeners to sidebar links
-document.querySelectorAll('.sidebar a').forEach(link => {
+document.querySelectorAll('.sidebar1 a').forEach(link => {
     link.addEventListener('click', toggleContent);
 });
+
+
+
+const iconBtn = document.querySelector('#icon-btns');
+const navigation = document.querySelector('.container2');
+
+iconBtn.addEventListener('click', () => {
+  navigation.classList.toggle('open');
+});
+const sr=ScrollReveal({
+    distance:'80px',
+    duration:1000,
+    delay:300,
+    reset:true
+
+
+})
+
