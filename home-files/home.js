@@ -14,4 +14,27 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+///for carousel moving
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+function updateCarousel() {
+    items.forEach((item, index) => {
+        item.style.display = index === currentIndex ? 'block' : 'none';
+    });
+}
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalItems;
+    updateCarousel();
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updateCarousel();
+});
+
+updateCarousel();
+
 

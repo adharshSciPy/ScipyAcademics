@@ -8,7 +8,7 @@
         if (!localStorage.getItem("visited")) {
             window.location.href = "loading.html";
         } else {
-            localStorage.removeItem("visited"); // Remove it so next refresh shows loading page again
+            localStorage.removeItem("visited");
         }
     </script>
     <title>Home</title>
@@ -148,59 +148,126 @@
                     </div>
                     <div class="study-exp-line2"></div>
                 </div>
-                <div class="education">
-                    <div class="edu1">
-                        <h2>2008-2010</h2>
-                        <h1>COMPUTER ENGINEERING</h1>
-                        <h3>UNIVERSITY OF CALIFORNIA</h3>
-                    </div>
-                    <div class="edu2">
-                        <h2>2004-2008</h2>
-                        <h1>ELECTRONICS ENGINEERING</h1>
-                        <h3>UNIVERSITY OF CALIFORNIA</h3>
-                    </div>
-                </div>
-                <div class="arrow-left-right">
-                    <button id="left-arrow"> <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
-                    </button>
-                    <button id="right-arrow"> <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                    </button>
-                </div>
-            </div>
-            <div class="lab">
-                <h2>LAB ASSISTANT</h2>
-                <p>As a Lab Assistant, I facilitated smooth laboratory operations, demonstrating precision in equipment
-                    handling and adherence to protocols. My dedication to maintaining a conducive learning environment
-                    contributed to the success of experimental endeavors.</p>
-            </div>
-            <div class="project">
-                <div class="project-content">
-                    <h1>LATEST </h1>
-                    <h2>PROJECTS</h2>
-                    <p>These are my latest projects, where I've applied my expertise to deliver cutting-edge digital
-                        solutions.</p>
-                </div>
-                <div class="proj-img-container">
-                    <div class="project-img">
-                        <img class="pro-img" src="./images/javier-esteban-8zcp9L0zNhg-unsplash-1.jpg" alt="">
-                        <div class="image-text">
-                            <h3>NFT APP DEVELOPMENT</h3>
-                            <h4>WEB APPLICATION</h4>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="education">
+                                <div class="edu-seperation">
+                                    <div class="edu1">
+                                        <h2>2009-2010</h2>
+                                        <h1>LAB ASSISTANT</h1>
+                                        <h3>UNIVERSITY OF CALIFORNIA</h3>
+                                    </div>
+                                    <div class="edu2">
+                                        <h2>2008-2010</h2>
+                                        <h1>COMPUTER ENGINEERING</h1>
+                                        <h3>UNIVERSITY OF CALIFORNIA</h3>
+                                    </div>
+                                </div>
+                                <div class="lab">
+                                    <h2>LAB ASSISTANT</h2>
+                                    <p>As a Lab Assistant, I facilitated smooth laboratory operations, demonstrating
+                                        precision in
+                                        equipment handling and adherence to protocols. My dedication to maintaining a
+                                        conducive learning
+                                        environment contributed to the success of experimental endeavors.</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="img-content">
-                            <h1>NEXT <br> TRAVEL MOBILE APP DESIGN</h1>
-                            <button id="right-arrow2"> <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
-                            </button>
+                        <div class="carousel-item">
+                            <div class="education">
+                                <div class="edu-seperation">
+                                    <div class="edu1">
+                                        <h2>2008-2010</h2>
+                                        <h1>COMPUTER ENGINEERING</h1>
+                                        <h3>UNIVERSITY OF CALIFORNIA</h3>
+                                    </div>
+                                    <div class="edu2">
+                                        <h2>2004-2008</h2>
+                                        <h1>ELECTRONICS ENGINEERING</h1>
+                                        <h3>UNIVERSITY OF CALIFORNIA</h3>
+                                    </div>
+                                </div>
+                                <div class="lab">
+                                    <h2>COMPUTER ENGINEERING</h2>
+                                    <p>I immersed myself in computer engineering, seamlessly blending coding finesse
+                                        with hardware intricacies. Navigating the realms of algorithms and circuitry, I
+                                        forged a dynamic path in the world of digital systems</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="education">
+                                <div class="edu-seperation">
+                                    <div class="edu1">
+                                        <h2>2004-2008</h2>
+                                        <h1>ELECTRONICS ENGINEERING</h1>
+                                        <h3>UNIVERSITY OF CALIFORNIA</h3>
+                                    </div>
+                                    <div class="edu2">
+                                        <h2>2009-2010</h2>
+                                        <h1>STUDENT RESEARCHER</h1>
+                                        <h3>UNIVERSITY OF CALIFORNIA</h3>
+                                    </div>
+                                </div>
+                                <div class="lab">
+                                    <h2>ELECTRONICS ENGINEERING</h2>
+                                    <p>Demonstrated expertise in Electronics Engineering, seamlessly integrating theoretical knowledge with hands-on experience. Proficient in circuit design, signal processing, and mastering intricacies of electronic systems</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="education">
+                                <div class="edu-seperation">
+                                    <div class="edu1">
+                                        <h2>2009-2010</h2>
+                                        <h1>STUDENT RESEARCHER</h1>
+                                        <h3>UNIVERSITY OF CALIFORNIA</h3>
+                                    </div>
+                                    <div class="edu2">
+                                        <h2>2009-2010</h2>
+                                        <h1>LAB ASSISTANT</h1>
+                                        <h3>UNIVERSITY OF CALIFORNIA</h3>
+                                    </div>
+                                </div>
+                                <div class="lab">
+                                    <h2>STUDENT RESEARCHER</h2>
+                                    <p>As a Student Researcher, I conducted impactful investigations, showcasing a commitment to rigorous inquiry and contributing to advancements in programming. My work reflects a blend of analytical acumen and collaborative problem-solving</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="plane-bg">
-                        <h2>
-                            <li>NOW PROUDLY WORKING WITH GOOGLE</li>
-                        </h2>
+                    <button id="prevBtn" class="carousel-control">❮</button>
+                    <button id="nextBtn" class="carousel-control">❯</button>
+                </div>
+                <div class="project">
+                    <div class="project-content">
+                        <h1>LATEST </h1>
+                        <h2>PROJECTS</h2>
+                        <p>These are my latest projects, where I've applied my expertise to deliver cutting-edge digital
+                            solutions.</p>
+                    </div>
+                    <div class="proj-img-container">
+                        <div class="project-img">
+                            <img class="pro-img" src="./images/javier-esteban-8zcp9L0zNhg-unsplash-1.jpg" alt="">
+                            <div class="image-text">
+                                <h3>NFT APP DEVELOPMENT</h3>
+                                <h4>WEB APPLICATION</h4>
+                            </div>
+                            <div class="img-content">
+                                <h1>NEXT <br> TRAVEL MOBILE APP DESIGN</h1>
+                                <button id="right-arrow2"> <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="plane-bg">
+                            <h2>
+                                <li>NOW PROUDLY WORKING WITH GOOGLE</li>
+                            </h2>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <section class="final-page">
         <div class="skills">
@@ -236,7 +303,7 @@
                 and JavaScript. I also excel in back-end frameworks such as Node.js and databases. My expertise allows
                 me to create seamless, responsive web applications with a strong user-focused approach</p>
         </div>
-    </section>  
+    </section>
 </body>
 
 </html>
