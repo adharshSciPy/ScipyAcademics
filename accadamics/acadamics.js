@@ -53,18 +53,21 @@ document.querySelectorAll('.sidebar1 a').forEach(link => {
 
 
 
-const iconBtn = document.querySelector('#icon-btns');
-const navigation = document.querySelector('.container2');
 
-iconBtn.addEventListener('click', () => {
-  navigation.classList.toggle('open');
+
+// Get the icon button, close button, and the container
+const iconBtn = document.querySelector('.icon-btn');
+const closeBtn = document.querySelector('.close-btn');
+const container = document.querySelector('.container2');
+
+// When the icon button is clicked, show the container and slide it in
+iconBtn.addEventListener('click', function() {
+  container.classList.add('open');
 });
-const sr=ScrollReveal({
-    distance:'80px',
-    duration:1000,
-    delay:300,
-    reset:true
 
+// When the close button is clicked, hide the container and slide it out
+closeBtn.addEventListener('click', function() {
+  container.classList.remove('open');
+});
 
-})
 
