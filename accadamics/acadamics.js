@@ -55,19 +55,84 @@ document.querySelectorAll('.sidebar1 a').forEach(link => {
 
 
 
-// Get the icon button, close button, and the container
-const iconBtn = document.querySelector('.icon-btn');
-const closeBtn = document.querySelector('.close-btn');
-const container = document.querySelector('.container2');
+// const iconBtn = document.querySelector('.icon-btn');
+// const closeBtn = document.querySelector('.close-btn');
+// const container = document.querySelector('.container2');
 
-// When the icon button is clicked, show the container and slide it in
-iconBtn.addEventListener('click', function() {
-  container.classList.add('open');
+// iconBtn.addEventListener('click', function() {
+//   container.classList.add('open');
+// });
+
+// closeBtn.addEventListener('click', function() {
+//   container.classList.remove('open');
+// });
+
+
+
+
+
+
+///for the first one opening and closing
+// Get all icon buttons, all close buttons, and the container
+const iconBtns = document.querySelectorAll('#icon-btn1');
+const closeBtns = document.querySelectorAll('.close-btn');
+const container = document.querySelector('#first-container');
+
+// When any icon button is clicked, show the container
+iconBtns.forEach(btn => {
+  btn.addEventListener('click', function() {
+    container.classList.add('open');
+  });
 });
 
-// When the close button is clicked, hide the container and slide it out
-closeBtn.addEventListener('click', function() {
-  container.classList.remove('open');
+// When any close button is clicked, hide the container
+closeBtns.forEach(btn => {
+  btn.addEventListener('click', function() {
+    container.classList.remove('open');
+  });
 });
 
 
+
+///for the second one opening and closing
+// Get all icon buttons, all close buttons, and the container
+const iconBtns2 = document.querySelectorAll('#icon-btn2');
+const closeBtns2 = document.querySelectorAll('.close-btn');
+const container2 = document.querySelector('#second-container');
+
+// When any icon button is clicked, show the container
+iconBtns2.forEach(btn => {
+  btn.addEventListener('click', function() {
+    container2.classList.add('open');
+  });
+});
+
+// When any close button is clicked, hide the container
+closeBtns2.forEach(btn => {
+  btn.addEventListener('click', function() {
+    container2.classList.remove('open');
+  });
+});
+
+
+
+
+///for the third one opening and closing
+// Get all icon buttons, all close buttons, and the container
+const iconBtns3 = document.querySelectorAll('#icon-btn3');
+const closeBtns3 = document.querySelectorAll('.close-btn');
+const container3 = document.querySelector('#third-container');
+
+// When any icon button is clicked, show the container
+iconBtns3.forEach(btn => {
+  btn.addEventListener('click', function() {
+    container3.classList.add('open');
+  });
+});
+
+// When any close button is clicked, hide the container
+closeBtns3.forEach(btn => {
+  btn.addEventListener('click', function() {
+    container3.classList.remove('open');
+  });
+});
