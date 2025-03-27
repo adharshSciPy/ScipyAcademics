@@ -160,7 +160,6 @@ a {
 .sidebar a:hover {
     color: cyan;
 }
-
 .contents {
     position: relative;
     width: calc(100% - 60px);
@@ -262,15 +261,6 @@ a {
 .academic {
     margin-right: 40px;
 }
-
-/* .heading h1{
-    font-size: large;
-    color: black;
-    background-color: red;
-    height: 200px;
-    width: 100px;
-} */
-
 .header {
     display: flex;
     flex-direction: column;
@@ -492,16 +482,12 @@ a {
 /* Left Section */
 .left-section {
     flex: 1;
-    background: url('./img/pic1-scaled.webp');
+    background: url('./img/pic1_comp.webp');
     background-size: cover;
-    /* Ensures the full image fits without cropping */
     background-position: center;
-    /* Centers the image */
     background-repeat: no-repeat;
-    /* Prevents tiling */
     width: 100%;
     height: 100vh;
-    /* Full viewport height */
 }
 
 /* Floating Close Button */
@@ -558,34 +544,139 @@ a {
 .abstract p {
     line-height: 2;
 }
+@media screen and (max-width: 1105px) {
+    .sidebar1,
+    .publication-card {
+        display: none !important;
+    }
+    .accordions {
+        display: block !important;
+        width: 100%;
+       
+    }
+    
+}
 
-/* ✅ For tablets (768px and below) */
-@media (max-width: 1103px) {
+@media screen and (max-width: 1104px) {
 
-    .sidebar1 {
+    .accordions {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: red;
+    }
+    
+
+    .accordion-items {
+        background-color: #004d40;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        /* overflow: hidden; */
+    }
+
+    .accordion-headers {
+        width: 100%;
+        background-color: #004d40;
+        color: white;
+        text-align: left;
+        padding: 15px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .accordion-headers::after {
+        content: ">";
+        font-size: 18px;
+        transition: transform 0.3s;
+    }
+
+    .accordion-headers.active::after {
+        transform: rotate(90deg);
+    }
+
+    .accordion-contents {
+        max-height: 0;
+        overflow: hidden;
+        background-color: #005e50;
+        color: white;
+        padding: 0 15px;
+        transition: max-height 0.3s ease-in-out;
+    }
+    .accordion-headers.active + .accordion-contents {
+        max-height: 500px; 
+    }
+    .publication-cards {
+        background-color: #d7e7e6;
+        padding: 20px;
+        margin-bottom: 10px;
         flex-direction: column;
-        width: 100%;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
+        justify-content: space-evenly;
+    }
+    
+    .heads1 {
+        margin-top: 0;
+        font-size: 1.2em;
+        color: #1e2a47;
+        font-weight: 200;
+    }
+    
+    .locations {
+        color: #086a41;
+        font-weight: 400;
+        font-size: x-small;
+        margin: 5px 0;
+    }
+    
+    .descriptions {
+        color: #1e2a47;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+    
+    .metadatas {
+        display: flex;
+        align-items: center;
+        background-color: #c1d4d3;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .books {
+        background-color: #01351f;
+        color: white;
+    }
+    
+    .selecteds {
+        background-color: black;
+        color: white;
+    }
+    
+    .dates {
+        color: #01351f;
         font-weight: bold;
-        max-height: 47vh;
-        overflow-y: auto;
-
+        font-size: x-small;
+        padding-left: 130px;
+    }
+    
+    .authorss {
+        margin-left: auto;
+        color: #1e2a47;
+        font-weight: 100;
+        font-size: x-small;
+    }
+    
+    .icon-btns {
+        background-color: #01351f;
+        color: white;
+        border: none;
+        padding: 8px;
+        font-size: 1.2em;
+        cursor: pointer;
     }
 
-    .sidebar1 li::before {
-        content: '+';
-        margin-right: 10px;
-    }
-
-    .content {
-
-        position: relative;
-        z-index: 1;
-        flex-grow: 2;
-        min-height: 100vh;
-        overflow-y: auto;
-        visibility: visible;
-        width: 100%;
-    }
 }

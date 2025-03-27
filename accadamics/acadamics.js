@@ -55,21 +55,6 @@ document.querySelectorAll('.sidebar1 a').forEach(link => {
 
 
 
-// const iconBtn = document.querySelector('.icon-btn');
-// const closeBtn = document.querySelector('.close-btn');
-// const container = document.querySelector('.container2');
-
-// iconBtn.addEventListener('click', function() {
-//   container.classList.add('open');
-// });
-
-// closeBtn.addEventListener('click', function() {
-//   container.classList.remove('open');
-// });
-
-
-
-
 
 
 ///for the first one opening and closing
@@ -134,5 +119,85 @@ iconBtns3.forEach(btn => {
 closeBtns3.forEach(btn => {
   btn.addEventListener('click', function() {
     container3.classList.remove('open');
+  });
+});
+
+// ///accordion section in 1105px
+// document.addEventListener("DOMContentLoaded", function () {
+//   const headers = document.querySelectorAll(".accordion-headers");
+//   const defaultOpenIndex = 0; // Opens the first accordion by default
+
+//   function openAccordion(index) {
+//       headers.forEach((header, i) => {
+//           let content = header.nextElementSibling;
+
+//           if (i === index) {
+//               header.classList.add("active");
+//               content.style.maxHeight = content.scrollHeight + "px";
+//           } else {
+//               header.classList.remove("active");
+//               content.style.maxHeight = null;
+//           }
+//       });
+//   }
+
+//   // Open first section by default if screen width is 1104px or smaller
+//   if (window.innerWidth <= 1104) {
+//       openAccordion(defaultOpenIndex);
+//   }
+
+//   // Event listener for clicking accordion headers
+//   headers.forEach((header, index) => {
+//       header.addEventListener("click", function () {
+//           if (this.classList.contains("active")) {
+//               this.classList.remove("active");
+//               this.nextElementSibling.style.maxHeight = null;
+//           } else {
+//               openAccordion(index);
+//           }
+//       });
+//   });
+// });
+
+//   // Click event to open sections but never close them when clicked
+//   headers.forEach((header, i) => {
+//       header.addEventListener("click", function () {
+//           openAccordion(i);
+//       });
+//   });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const headers = document.querySelectorAll(".accordion-headers");
+  const defaultOpenIndex = 0; // Open first accordion by default if needed
+
+  function openAccordion(index) {
+      headers.forEach((header, i) => {
+          let content = header.nextElementSibling;
+
+          if (i === index) {
+              header.classList.add("active");
+              content.style.maxHeight = content.scrollHeight + "px";
+          } else {
+              header.classList.remove("active");
+              content.style.maxHeight = null;
+          }
+      });
+  }
+
+  // Open first accordion by default only if the screen width is 1104px or smaller
+  if (window.innerWidth <= 1104) {
+      openAccordion(defaultOpenIndex);
+  }
+
+  // Event listener for clicking accordion headers
+  headers.forEach((header, index) => {
+      header.addEventListener("click", function () {
+          if (this.classList.contains("active")) {
+              this.classList.remove("active");
+              this.nextElementSibling.style.maxHeight = null;
+          } else {
+              openAccordion(index);
+          }
+      });
   });
 });
