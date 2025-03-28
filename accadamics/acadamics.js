@@ -57,70 +57,7 @@ document.querySelectorAll('.sidebar1 a').forEach(link => {
 
 
 
-///for the first one opening and closing
-// Get all icon buttons, all close buttons, and the container
-const iconBtns = document.querySelectorAll('#icon-btn1');
-const closeBtns = document.querySelectorAll('.close-btn');
-const container = document.querySelector('#first-container');
 
-// When any icon button is clicked, show the container
-iconBtns.forEach(btn => {
-  btn.addEventListener('click', function() {
-    container.classList.add('open');
-  });
-});
-
-// When any close button is clicked, hide the container
-closeBtns.forEach(btn => {
-  btn.addEventListener('click', function() {
-    container.classList.remove('open');
-  });
-});
-
-
-
-///for the second one opening and closing
-// Get all icon buttons, all close buttons, and the container
-const iconBtns2 = document.querySelectorAll('#icon-btn2');
-const closeBtns2 = document.querySelectorAll('.close-btn');
-const container2 = document.querySelector('#second-container');
-
-// When any icon button is clicked, show the container
-iconBtns2.forEach(btn => {
-  btn.addEventListener('click', function() {
-    container2.classList.add('open');
-  });
-});
-
-// When any close button is clicked, hide the container
-closeBtns2.forEach(btn => {
-  btn.addEventListener('click', function() {
-    container2.classList.remove('open');
-  });
-});
-
-
-
-
-///for the third one opening and closing
-// Get all icon buttons, all close buttons, and the container
-const iconBtns3 = document.querySelectorAll('#icon-btn3');
-const closeBtns3 = document.querySelectorAll('.close-btn');
-const container3 = document.querySelector('#third-container');
-
-// When any icon button is clicked, show the container
-iconBtns3.forEach(btn => {
-  btn.addEventListener('click', function() {
-    container3.classList.add('open');
-  });
-});
-
-// When any close button is clicked, hide the container
-closeBtns3.forEach(btn => {
-  btn.addEventListener('click', function() {
-    container3.classList.remove('open');
-  });
-});
 
 // ///accordion section in 1105px
 // document.addEventListener("DOMContentLoaded", function () {
@@ -200,4 +137,121 @@ document.addEventListener("DOMContentLoaded", function () {
           }
       });
   });
+});
+
+
+
+
+
+  
+///for the first one opening and closing
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("first-container");
+  const overlay = document.createElement("div");
+  overlay.classList.add("overlay");
+  document.body.appendChild(overlay); // Add overlay to the body
+
+  const iconBtns = document.querySelectorAll("#icon-btn1");
+  const closeBtns = document.querySelectorAll(".close-btn");
+
+  function openModal() {
+      container.classList.add("open");
+      overlay.style.display = "block"; // Show overlay
+      document.body.classList.add("modal-open"); // Disable background scroll
+  }
+
+  function closeModal() {
+      container.classList.remove("open");
+      overlay.style.display = "none"; // Hide overlay
+      document.body.classList.remove("modal-open"); // Enable background scroll
+  }
+
+
+  // Open modal when clicking any icon button
+  iconBtns.forEach(btn => {
+      btn.addEventListener("click", openModal);
+  });
+
+  // Close modal when clicking any close button
+  closeBtns.forEach(btn => {
+      btn.addEventListener("click", closeModal);
+  });
+
+  // Close modal when clicking the overlay
+  overlay.addEventListener("click", closeModal);
+});
+
+
+
+///for the second one opening and closing
+document.addEventListener("DOMContentLoaded", function () {
+  const container2 = document.getElementById("second-container");
+  const overlay2 = document.createElement("div");
+  overlay2.classList.add("overlay");
+  document.body.appendChild(overlay2); // Add overlay to the body
+
+  const iconBtns2 = document.querySelectorAll("#icon-btn2");
+  const closeBtns2 = document.querySelectorAll(".close-btn");
+
+  function openModal2() {
+      container2.classList.add("open");
+      overlay2.style.display = "block"; // Show overlay
+      document.body.classList.add("modal-open"); // Disable background scroll
+  }
+
+  function closeModal2() {
+      container2.classList.remove("open");
+      overlay2.style.display = "none"; // Hide overlay
+      document.body.classList.remove("modal-open"); // Enable background scroll
+  }
+
+  // Open modal when clicking any icon button
+  iconBtns2.forEach(btn => {
+      btn.addEventListener("click", openModal2);
+  });
+
+  // Close modal when clicking any close button
+  closeBtns2.forEach(btn => {
+      btn.addEventListener("click", closeModal2);
+  });
+
+  // Close modal when clicking the overlay
+  overlay2.addEventListener("click", closeModal2);
+});
+
+
+///for the third one opening and closing
+document.addEventListener("DOMContentLoaded", function () {
+  const container3 = document.getElementById("third-container");
+  const overlay3 = document.createElement("div");
+  overlay3.classList.add("overlay");
+  document.body.appendChild(overlay3); // Add overlay to the body
+
+  const iconBtns3 = document.querySelectorAll("#icon-btn3");
+  const closeBtns3 = document.querySelectorAll(".close-btn");
+
+  function openModal3() {
+      container3.classList.add("open");
+      overlay3.style.display = "block"; // Show overlay
+      document.body.classList.add("modal-open"); // Disable background scroll
+  }
+
+  function closeModal3() {
+      container3.classList.remove("open");
+      overlay3.style.display = "none"; // Hide overlay
+      document.body.classList.remove("modal-open"); // Enable background scroll
+  }
+
+  // Open modal when clicking any icon button
+  iconBtns3.forEach(btn => {
+      btn.addEventListener("click", openModal3);
+  });
+
+  // Close modal when clicking any close button
+  closeBtns3.forEach(btn => {
+      btn.addEventListener("click", closeModal3);
+  });
+
+  // Close modal when clicking the overlay
+  overlay3.addEventListener("click", closeModal3);
 });
