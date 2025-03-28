@@ -455,6 +455,17 @@ a {
     cursor: pointer;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 150;
+    display: none;
+}
+
 .container2 {
     display: flex;
     visibility: hidden;
@@ -463,7 +474,7 @@ a {
     position: fixed;
     z-index: 200;
     /* Fix the position so it stays in place when it slides */
-    top: 0;
+    top: 54px;
     right: -100%;
     /* Initially off-screen (to the right) */
     width: 80%;
@@ -496,12 +507,14 @@ a {
     color: white;
     font-size: 24px;
     border: none;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     position: absolute;
-    top: 0px;
-
+    top: 30px;
+    left: 30px;
+    font-size: 40px;
+    font-weight: lighter;
 }
 
 /* Right Section */
@@ -514,6 +527,14 @@ a {
     height: 85.5vh;
     overflow-y: scroll;
 
+}
+
+.right-section::-webkit-scrollbar {
+    display: none;
+}
+
+body.modal-open {
+    overflow: hidden;
 }
 
 /* Article Card */
